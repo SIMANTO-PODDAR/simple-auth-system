@@ -1,10 +1,16 @@
+"use client"
 import Navbar from "@/components/Navbar/Navbar";
+import { authClient } from "@/lib/auth-client";
 
 export default function Home() {
+
+  const { data: session } = authClient.useSession()
+  const user = session?.user
+
   return (
     <>
       <Navbar />
-      <h1>Home Page</h1>
+      <h1 className="text-center text-2xl font-bold">Welcome {user?.name}!</h1>
     </>
   );
 }
