@@ -31,7 +31,7 @@ const SignUpPage = () => {
     return (
         <div>
             <Navbar />
-            <p className='text-center'>Sign Up:</p>
+            <p className='text-center text-2xl font-bold'>Sign Up:</p>
 
             <div className='flex justify-center'>
                 <form className='grid gap-5' onSubmit={handleSignUp}>

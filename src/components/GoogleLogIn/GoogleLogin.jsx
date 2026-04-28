@@ -11,7 +11,7 @@ const GoogleLogin = () => {
 
     return (
         <div className='flex justify-center my-3'>
-            <button className='btn' onClick={handleGoogleLogIn}>Log In With Google</button>
+            <button className='btn w-f text-green-950 bg-indigo-400' onClick={handleGoogleLogIn}>Log In With Google</button>
         </div>
     );
 };

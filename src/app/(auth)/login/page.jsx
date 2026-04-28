@@ -26,7 +26,8 @@ const LogInPage = () => {
     return (
         <div>
             <Navbar />
-            <p className='text-center'>Log In:</p>
+            <p className="text-center text-2xl font-bold">Log In:</p>
+            <p className='text-center font-bold text-green-300 text-[12px]'>You must be logged in to view Profile!</p>
 
             <div className='flex justify-center'>
                 <form className='grid gap-5' onSubmit={handleLogIn}>
