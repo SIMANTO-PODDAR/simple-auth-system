@@ -3,6 +3,7 @@
 import GoogleLogin from '@/components/GoogleLogIn/GoogleLogin';
 import Navbar from '@/components/Navbar/Navbar';
 import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
 
@@ -19,11 +20,11 @@ const SignUpPage = () => {
         })
 
         if (data) {
-            alert('Sign Up successful')
+            toast.success('Sign Up successful')
         }
 
         if (!data) {
-            alert(error.message)
+            toast.error(error.message)
         }
 
     }

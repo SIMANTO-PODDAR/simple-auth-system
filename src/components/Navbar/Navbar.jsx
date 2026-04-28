@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { data: session } = authClient.useSession()
@@ -12,6 +13,7 @@ const Navbar = () => {
         await authClient.signOut({
             fetchOptions: {
                 onSuccess: () => {
+                    toast.success('Log out successfully!')
                     router.push("/login"); // redirect to login page
                 },
             },

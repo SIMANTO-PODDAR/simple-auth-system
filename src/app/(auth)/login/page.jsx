@@ -2,6 +2,7 @@
 import GoogleLogin from '@/components/GoogleLogIn/GoogleLogin';
 import Navbar from '@/components/Navbar/Navbar';
 import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
 
 const LogInPage = () => {
 
@@ -16,9 +17,12 @@ const LogInPage = () => {
             password: iptPassword,
             callbackURL: '/profile'
         })
+        if(data){
+            toast.success('Log In Successfully!')
+        }
 
         if (!data) {
-            alert(error.message)
+            toast.error(error.message)
         }
 
     }
